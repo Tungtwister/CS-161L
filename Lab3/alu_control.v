@@ -19,8 +19,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module alu_control(
-	 input wire clk,
-	 input wire reset,
+	 //input wire clk,
+	 //input wire reset,
 	 
     input wire [1:0] alu_op,
     input wire [5:0] instruction_5_0,
@@ -35,11 +35,12 @@ case (alu_op)
 2'b00 : alu_out = 4'b0010;
 //Branch equal
 2'b01 : alu_out = 4'b0110;
+2'b11 : alu_out = 4'b0110;
 //R-type
 2'b10 : 
 	
 	case(instruction_5_0)
-	//add
+	//add & addi
 	6'b100000 : alu_out = 4'b0010;
 	//addu
 	6'b100001 : alu_out = 4'b0010;
@@ -61,15 +62,5 @@ case (alu_op)
 endcase
 
 end
-
-always @(posedge clk) begin
-if(reset)
-begin
-alu_out = 4'b0000;
-end
-//alu_out <= c_alu_out;
-
-end
-
 
 endmodule

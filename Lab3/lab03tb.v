@@ -324,6 +324,24 @@ module lab03tb;
 		if (branch != 1'b0) $display ("Branch is wrong");
 		if (alu_out != 4'b1100) $display ("Alu out is wrong");
 		
+				instruction_5_0 = 6'b100000;
+      instr_op = 6'b001000;
+		  
+		#100;
+        
+		$display("TC22 Addi ");
+		
+		if (reg_dst != 1'b1) $display  ("Reg dst is wrong");
+		
+		if (alu_src    != 1'b0) $display   ("Alu Src is wrong");
+		if (mem_to_reg != 1'b0) $display("Mem to Reg is wrong");
+		if (reg_write  != 1'b1) $display ("Reg Write is wrong");
+		if (mem_read   != 1'b0) $display ("Mem read is wrong");
+		
+		if (mem_write  != 1'b0) $display ("Mem write is wrong");
+		if (branch != 1'b0) $display ("Branch is wrong");
+		if (alu_out != 4'b0010) $display ("Alu out is wrong");
+		
 	end
       
 endmodule

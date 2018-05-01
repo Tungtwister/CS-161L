@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module control_unit(
-	input wire clk,
-	input wire reset,
+	//input wire clk,
+	//input wire reset,
 	
 	input wire [5:0] instr_op ,
 	output reg reg_dst ,
@@ -129,30 +129,5 @@ end
 endcase
 
 end
-
-//sequential block
-always @ (posedge clk) begin
-if(reset) 
-begin
-reg_dst <=	0;
-branch <=	0;
-mem_read <= 0;
-mem_to_reg <= 0;
-alu_op <= 0;
-mem_write <= 0;
-alu_src <= 0;
-reg_write <= 0;
-end
-
-//reg_dst <=	c_reg_dst;
-//branch <=	c_branch;
-//mem_read <= c_mem_read;
-//mem_to_reg <= c_mem_to_reg;
-//alu_op <= c_alu_op;
-//mem_write <= c_mem_write;
-//alu_src <= c_alu_src;
-//reg_write <= c_reg_write;
-end
-
 
 endmodule
