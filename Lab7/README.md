@@ -9,12 +9,13 @@ atung003@ucr.edu
 ==========================================================
 REMARKS
 
-(a) My simluation works against most test cases provided
+(a) My simulation passes all the test cases
+(b) Solving Test Case 12 was a little unusual 
    
 ==========================================================
 BUGS IF ANY
 
-(a) My simulation is unable to handle certain cases involving negative values. If the test case involves both a negative and positive, it will result in an error in some cases.
+(a) No known bugs
 
 ==========================================================
 
