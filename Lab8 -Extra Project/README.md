@@ -9,7 +9,7 @@ atung003@ucr.edu
 REMARKS
 
 (a) My simulation passes majority of test cases
-(b) I added 10 extra test cases to the given dummy testbench
+(b) I added 11 extra test cases to the given dummy testbench
 (c) Labeled Testcases from T1 - T30
 (d) Unable to pass Test case 18 due to underflow
    
